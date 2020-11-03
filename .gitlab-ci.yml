@@ -1,0 +1,41 @@
+image: 192.168.111.61:5005/docker/node-internal
+
+variables:
+  DOCKER_DRIVER: overlay2
+  REGISTRY: 192.168.111.61:5005
+  CONTAINER_IMAGE: $REGISTRY/$CI_PROJECT_PATH
+  LIBRARY: kles-material-pipe
+  
+
+before_script:
+# Ensure that node works correctly
+- npm -v
+- node -v
+# Install @angular/cli globally
+- npm i @angular/cli
+
+install:
+  stage: install
+  script:
+    - npm i
+  cache:
+    paths:
+      - npm
+    policy: push
+build:
+  stage: build
+  script:
+    - ng build
+  cache:
+    paths:
+      - npm build $LIBRARY --prod
+    policy: pull
+deploy:
+  stage: deploy
+  script:
+    - cd dist/$LIBRARY
+    - npm publish --registry "http://192.168.111.61:8081/repository/npm-3kles/"  --force*
+  cache:
+    paths:
+      - npm
+    policy: pull

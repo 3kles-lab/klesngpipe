@@ -1,27 +1,145 @@
-# KlesNgPipe
+[![NPM Version](https://img.shields.io/npm/v/kles-ng-pipe.svg)](https://npmjs.org/package/kles-ng-pipe)
+[![Build Status](https://travis-ci.org/fknop/kles-ng-pipe.svg?branch=master)](https://travis-ci.org/fknop/kles-ng-pipe)
+[![Coverage Status](https://coveralls.io/repos/github/fknop/kles-ng-pipe/badge.svg?branch=master)](https://coveralls.io/github/fknop/kles-ng-pipe?branch=master)
+[![Downloads](https://img.shields.io/npm/dt/kles-ng-pipe.svg)](https://npmjs.org/package/kles-ng-pipe)
+[![Downloads](https://img.shields.io/npm/dm/kles-ng-pipe.svg)](https://npmjs.org/package/kles-ng-pipe)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+# kles-ng-pipe
 
-## Development server
+**kles-ng-pipe** is a pipes library for `Angular`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Changelog
 
-## Code scaffolding
+Check out the [changelog](./CHANGELOG.md) to check all the latest changes.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Pipes
 
-## Build
+You can find the documentations in the [`docs`](./docs) folder or on [`GitLab`](http://gitlab.3kles.local/angular/KlesNgPipe).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Collections (array)
 
-## Running unit tests
+- [`empty`](./docs/array.md#empty)
+- [`head`](./docs/array.md#head)
+- [`initial`](./docs/array.md#initial)
+- [`join`](./docs/array.md#join)
+- [`last`](./docs/array.md#last)
+- [`tail`](./docs/array.md#tail)
+- [`uniq`](./docs/array.md#uniq)
+- [`without`](./docs/array.md#without)
+- [`intersection`](./docs/array.md#intersection)
+- [`union`](./docs/array.md#union)
+- [`range`](./docs/array.md#range)
+- [`map`](./docs/array.md#map)
+- [`pluck`](./docs/array.md#pluck)
+- [`where`](./docs/array.md#where)
+- [`firstOrDefault`](./docs/array.md#firstordefault)
+- [`orderBy`](./docs/array.md#orderby)
+- [`reverse`](./docs/array.md#reverse)
+- [`count`](./docs/array.md#count)
+- [`some`](./docs/array.md#some)
+- [`every`](./docs/array.md#every)
+- [`shuffle`](./docs/array.md#shuffle)
+- [`take`](./docs/array.md#take)
+- [`takeUntil`](./docs/array.md#takeuntil)
+- [`takeWhile`](./docs/array.md#takewhile)
+- [`drop`](./docs/array.md#drop)
+- [`deep`](./docs/array.md#deep)
+- [`chunk`](./docs/array.md#chunk)
+- [`flatten`](./docs/array.md#flatten)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Boolean
 
-## Running end-to-end tests
+- [`greater`](./docs/boolean.md#greater)
+- [`greaterOrEqual`](./docs/boolean.md#greaterorequal)
+- [`less`](./docs/boolean.md#less)
+- [`lessOrEqual`](./docs/boolean.md#lessorequal)
+- [`equal`](./docs/boolean.md#equal)
+- [`notEqual`](./docs/boolean.md#notequal)
+- [`identical`](./docs/boolean.md#identical)
+- [`notIdentical`](./docs/boolean.md#notidentical)
+- [`isNull`](./docs/boolean.md#isnull)
+- [`isUndefined`](./docs/boolean.md#isundefined)
+- [`isNil`](./docs/boolean.md#isnil)
+- [`isNumber`](./docs/boolean.md#isnumber)
+- [`isString`](./docs/boolean.md#isstring)
+- [`isFunction`](./docs/boolean.md#isfunction)
+- [`isArray`](./docs/boolean.md#isarray)
+- [`isObject`](./docs/boolean.md#isobject)
+- [`isDefined`](./docs/boolean.md#isdefined)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Math
 
-## Further help
+- [`bytes`](./docs/math.md#bytes)
+- [`ceil`](./docs/math.md#ceil)
+- [`floor`](./docs/math.md#floor)
+- [`round`](./docs/math.md#round)
+- [`degrees`](./docs/math.md#degrees)
+- [`radians`](./docs/math.md#radians)
+- [`random`](./docs/math.md#random)
+- [`pow`](./docs/math.md#pow)
+- [`sqrt`](./docs/math.md#sqrt)
+- [`ordinal`](./docs/math.md#ordinal)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Aggregate
+
+- [`groupBy`](./docs/aggregate.md#groupby)
+- [`min`](./docs/aggregate.md#min)
+- [`max`](./docs/aggregate.md#max)
+- [`mean`](./docs/aggregate.md#mean)
+- [`sum`](./docs/aggregate.md#sum)
+
+### String
+
+- [`leftpad`](./docs/string.md#leftpad)
+- [`rightpad`](./docs/string.md#rightpad)
+- [`pad`](./docs/string.md#pad)
+- [`trim`](./docs/string.md#trim)
+- [`split`](./docs/string.md#split)
+- [`replace`](./docs/string.md#replace)
+- [`match`](./docs/string.md#match)
+- [`test`](./docs/string.md#test)
+- [`newlines`](./docs/string.md#newlines)
+- [`capitalize`](./docs/string.md#capitalize)
+- [`upperfirst`](./docs/string.md#upperfirst)
+- [`template`](./docs/string.md#template)
+- [`encodeURI`](./docs/string.md#encodeuri)
+- [`encodeURIComponent`](./docs/string.md#encodeuricomponent)
+- [`decodeURI`](./docs/string.md#decodeuri)
+- [`decodeURIComponent`](./docs/string.md#decodeuricomponent)
+- [`repeat`](./docs/string.md#repeat)
+- [`truncate`](./docs/string.md#truncate)
+- [`slugify`](./docs/string.md#slugify)
+- [`stripTags`](./docs/string.md#striptags)
+- [`latinize`](./docs/string.md#latinize)
+- [`wrap`](./docs/string.md#wrap)
+- [`with`](./docs/string.md#with)
+- [`reverseStr`](./docs/string.md#reversestr)
+
+### Object
+
+- [`keys`](./docs/object.md#keys)
+- [`toArray`](./docs/object.md#toarray)
+- [`defaults`](./docs/object.md#defaults)
+
+## Install
+
+### npm
+
+```
+npm install kles-ng-pipe --save
+```
+
+## How to use
+
+Check the [`documentation`](./docs) for how to import your pipes in your `NgModule` and how to use individual pipes.
+
+## Tests
+
+```
+npm install
+npm test
+```
+
+## License
+
+[`MIT`](./LICENSE.md)

@@ -123,6 +123,46 @@
           }
         }
       }
+    },
+    "kles-ng-pipe": {
+      "projectType": "library",
+      "root": "projects/kles-ng-pipe",
+      "sourceRoot": "projects/kles-ng-pipe/src",
+      "prefix": "kles",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/kles-ng-pipe/tsconfig.lib.json",
+            "project": "projects/kles-ng-pipe/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/kles-ng-pipe/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/kles-ng-pipe/src/test.ts",
+            "tsConfig": "projects/kles-ng-pipe/tsconfig.spec.json",
+            "karmaConfig": "projects/kles-ng-pipe/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/kles-ng-pipe/tsconfig.lib.json",
+              "projects/kles-ng-pipe/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "KlesNgPipe"
 }

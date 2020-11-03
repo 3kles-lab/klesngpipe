@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "kles-ng-pipe": [
+        "dist/kles-ng-pipe/kles-ng-pipe",
+        "dist/kles-ng-pipe"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
