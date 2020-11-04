@@ -9,17 +9,18 @@ variables:
   DOCKER_DRIVER: overlay2
   REGISTRY: 192.168.111.61:5005
   CONTAINER_IMAGE: $REGISTRY/$CI_PROJECT_PATH
+  LIBRARY: "kles-ng-pipe"
   
 before_script:
   # Ensure that node works correctly
   - npm -v
   - node -v
-  # Install @angular/cli globally
-  - npm i @angular/cli
-
+  
 install:
   stage: install
   script:
+    # Install @angular/cli globally
+    - npm i @angular/cli
     - npm i
   cache:
     paths:
@@ -38,8 +39,9 @@ build:
 deploy:
   stage: deploy
   script:
+    -echo $LIBRARY ${LIBRARY}
     - cd dist/$LIBRARY
-    - npm publish --registry "http://192.168.111.61:8081/repository/npm-3kles/"  --force*
+    - npm publish --registry "http://192.168.111.61:8081/repository/npm-3kles/"  --force
   cache:
     paths:
       - npm
