@@ -2,6 +2,7 @@
   "name": "kles-ng-pipe",
   "version": "0.0.0",
   "scripts": {
+    "build:lib":"ng build kles-ng-pipe --prod",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
