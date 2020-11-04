@@ -22,6 +22,7 @@ job:install:
     paths:
       - npm
     policy: push
+    
 job:build:
   stage: build
   script:
@@ -30,6 +31,7 @@ job:build:
     paths:
       - npm build $LIBRARY --prod
     policy: pull
+
 job:deploy:
   stage: deploy
   script:
