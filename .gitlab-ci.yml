@@ -14,8 +14,8 @@ before_script:
 # Install @angular/cli globally
 - npm i @angular/cli
 
-job:install:
-  stage: install
+install:
+  stage: build
   script:
     - npm i
   cache:
@@ -23,16 +23,17 @@ job:install:
       - npm
     policy: push
     
-job:build:
+build:
   stage: build
   script:
-    - ng build
+    - npm i
+    - ng build $LIBRARY --prod
   cache:
     paths:
-      - npm build $LIBRARY --prod
+      - npm
     policy: pull
 
-job:deploy:
+deploy:
   stage: deploy
   script:
     - cd dist/$LIBRARY
