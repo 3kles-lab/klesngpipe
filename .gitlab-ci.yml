@@ -9,7 +9,6 @@ variables:
   DOCKER_DRIVER: overlay2
   REGISTRY: 192.168.111.61:5005
   CONTAINER_IMAGE: $REGISTRY/$CI_PROJECT_PATH
-  LIBRARY: "kles-ng-pipe"
   
 before_script:
   # Ensure that node works correctly
@@ -39,8 +38,7 @@ build:
 deploy:
   stage: deploy
   script:
-    -echo $LIBRARY ${LIBRARY}
-    - cd dist/$LIBRARY
+    - cd dist/kles-ng-pipe
     - npm publish --registry "http://192.168.111.61:8081/repository/npm-3kles/"  --force
   cache:
     paths:
