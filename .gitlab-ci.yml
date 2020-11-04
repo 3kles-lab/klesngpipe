@@ -9,8 +9,7 @@ variables:
   DOCKER_DRIVER: overlay2
   REGISTRY: 192.168.111.61:5005
   CONTAINER_IMAGE: $REGISTRY/$CI_PROJECT_PATH
-  LIBRARY: "kles-material-pipe"
-
+  
 before_script:
   # Ensure that node works correctly
   - npm -v
@@ -21,7 +20,6 @@ before_script:
 install:
   stage: install
   script:
-
     - npm i
   cache:
     paths:
