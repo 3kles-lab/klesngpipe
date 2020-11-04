@@ -1,3 +1,8 @@
+stages:
+  - install
+  - build
+  - deploy
+
 image: 192.168.111.61:5005/docker/node-internal
 
 variables:
@@ -5,29 +10,28 @@ variables:
   REGISTRY: 192.168.111.61:5005
   CONTAINER_IMAGE: $REGISTRY/$CI_PROJECT_PATH
   LIBRARY: kles-material-pipe
-  
 
 before_script:
-# Ensure that node works correctly
-- npm -v
-- node -v
-# Install @angular/cli globally
-- npm i @angular/cli
+  # Ensure that node works correctly
+  - npm -v
+  - node -v
+  # Install @angular/cli globally
+  - npm i @angular/cli
 
 install:
-  stage: build
+  stage: install
   script:
     - npm i
   cache:
     paths:
       - npm
     policy: push
-    
+
 build:
   stage: build
   script:
     - npm i
-    - ng build $LIBRARY --prod
+    - ng build ${LIBRARY} --prod
   cache:
     paths:
       - npm
