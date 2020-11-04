@@ -19,8 +19,6 @@ before_script:
 install:
   stage: install
   script:
-    # Install @angular/cli globally
-    - npm i @angular/cli
     - npm i
   cache:
     paths:
@@ -30,6 +28,8 @@ install:
 build:
   stage: build
   script:
+    # Install @angular/cli globally
+    - npm i @angular/cli
     - npm run build:lib
   cache:
     paths:
