@@ -30,9 +30,10 @@ build:
     - npm i @angular/cli
     - npm run build:lib
     - ls
-    artifacts:
+  artifacts:
+    expire_in: 1 hour
     paths:
-    - dist/
+        - dist
     
 deploy:
   stage: deploy
