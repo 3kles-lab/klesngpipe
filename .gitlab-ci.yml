@@ -9,7 +9,7 @@ variables:
   DOCKER_DRIVER: overlay2
   REGISTRY: 192.168.111.61:5005
   CONTAINER_IMAGE: $REGISTRY/$CI_PROJECT_PATH
-  LIBRARY_NG: "kles-material-ng-pipe"
+  LIBRARY_NG: ls projects | head -n 1
   
 before_script:
   # Ensure that node works correctly
