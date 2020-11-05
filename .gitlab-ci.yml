@@ -22,7 +22,6 @@ build:
     - npm i
     - npm i @angular/cli
     - npm run build:lib
-    - ls
   artifacts:
     expire_in: 1 hour
     paths:
@@ -31,6 +30,5 @@ build:
 deploy:
   stage: deploy
   script:
-    - ls
     - cd dist/kles-ng-pipe
     - npm publish --registry "http://192.168.111.61:8081/repository/npm-3kles/"  --force
