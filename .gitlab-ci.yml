@@ -15,16 +15,11 @@ before_script:
   - npm -v
   - node -v
   
-install:
-  stage: install
-  script:
-    - npm i
-    - ls
-    
 build:
   stage: build
   script:
     # Install @angular/cli globally
+    - npm i
     - npm i @angular/cli
     - npm run build:lib
     - ls
@@ -32,6 +27,5 @@ build:
 deploy:
   stage: deploy
   script:
-    - ls
     - cd dist/kles-ng-pipe
     - npm publish --registry "http://192.168.111.61:8081/repository/npm-3kles/"  --force
