@@ -34,5 +34,6 @@ build:
 deploy:
   stage: deploy
   script:
+    - ls
     - cd dist/kles-ng-pipe
     - npm publish --registry "http://192.168.111.61:8081/repository/npm-3kles/"  --force
