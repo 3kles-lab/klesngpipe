@@ -30,6 +30,9 @@ build:
     - npm i @angular/cli
     - npm run build:lib
     - ls
+    artifacts:
+    paths:
+    - dist/
     
 deploy:
   stage: deploy
