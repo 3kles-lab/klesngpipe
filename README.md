@@ -1,8 +1,5 @@
-[![NPM Version](https://img.shields.io/npm/v/kles-ng-pipe.svg)](https://npmjs.org/package/kles-ng-pipe)
-[![Build Status](https://travis-ci.org/fknop/kles-ng-pipe.svg?branch=master)](https://travis-ci.org/fknop/kles-ng-pipe)
-[![Coverage Status](https://coveralls.io/repos/github/fknop/kles-ng-pipe/badge.svg?branch=master)](https://coveralls.io/github/fknop/kles-ng-pipe?branch=master)
-[![Downloads](https://img.shields.io/npm/dt/kles-ng-pipe.svg)](https://npmjs.org/package/kles-ng-pipe)
-[![Downloads](https://img.shields.io/npm/dm/kles-ng-pipe.svg)](https://npmjs.org/package/kles-ng-pipe)
+
+[![pipeline status](http://gitlab.3kles.local/angular/klesngpipe/badges/master/pipeline.svg)](http://gitlab.3kles.local/angular/klesngpipe/-/commits/master)
 
 # kles-ng-pipe
 

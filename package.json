@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "build:lib":"ng build kles-ng-pipe --prod",
+    "publish:lib":"cd dist/kles-ng-pipe && npm run publish:3kles",
+    "publish:3kles":"npm publish --registry 'http://192.168.111.61:8081/repository/npm-3kles/'  --force",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
