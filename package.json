@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "build:lib":"ng build kles-ng-pipe --prod",
-    "publish:lib":"cd dist/kles-ng-pipe && npm run publish:kles",
-    "publish:kles":"npm publish --registry 'http://192.168.111.61:8081/repository/npm-3kles/'  --force",
+    "publish:lib":"cd dist/kles-ng-pipe && npm publish --registry 'http://192.168.111.61:8081/repository/npm-3kles/'  --force",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -12,7 +11,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.0",
     "@angular/common": "~9.1.0",
