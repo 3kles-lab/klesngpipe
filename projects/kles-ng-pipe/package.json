@@ -1,5 +1,5 @@
 {
-  "name": "kles-ng-pipe",
+  "name": "@3kles/kles-ng-pipe",
   "version": "1.0.0",
   "peerDependencies": {
     "@angular/common": "^9.1.12",
