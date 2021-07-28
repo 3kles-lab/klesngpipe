@@ -1,6 +1,7 @@
 # Object
 
 - [`keys`](#keys)
+- [`property`](#property)
 - [`toArray`](#toarray)
 - [`defaults`](#defaults)
 
@@ -31,6 +32,31 @@ const value = {
 <!-- ['a', 'b', 'c'] -->
 {{ [1, 2, 3] | keys }}
 <!-- ['0', '1', '2'] -->
+```
+
+#### property
+
+Returns the value of the object's property
+
+##### File
+
+```typescript
+import { NgPropertyPipeModule } from 'kles-ng-pipe';
+```
+
+##### Usage
+
+```javascript
+const value = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+```
+
+```html
+{{ value | property:'b' }}
+<!-- 2 -->
 ```
 
 #### toArray
