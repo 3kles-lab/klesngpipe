@@ -7,7 +7,7 @@ export * from './lib/kles-ng-pipe.module';
 export * from './lib/aggregate/aggregate.module';
 export * from './lib/array/array.module';
 export * from './lib/boolean/boolean.module';
-export* from './lib/date/date.module';
+export * from './lib/date/date.module';
 export * from './lib/math/math.module';
 export * from './lib/object/object.module';
 export * from './lib/string/string.module';
@@ -66,7 +66,7 @@ export * from './lib/boolean/is-array.pipe';
 export * from './lib/boolean/is-object.pipe';
 export * from './lib/boolean/is-defined.pipe';
 
-export* from './lib/date/dateformat.pipe';
+export * from './lib/date/dateformat.pipe';
 
 export * from './lib/math/bytes.pipe';
 export * from './lib/math/ceil.pipe';
@@ -80,6 +80,7 @@ export * from './lib/math/pow.pipe';
 export * from './lib/math/abs.pipe';
 export * from './lib/math/ordinal.pipe';
 export * from './lib/object/keys.pipe';
+export * from './lib/object/property.pipe';
 export * from './lib/object/to-array.pipe';
 export * from './lib/object/defaults.pipe';
 
