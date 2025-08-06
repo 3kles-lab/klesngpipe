@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { shuffle } from '../utils/utils';
 
 @Pipe({
-  name: 'shuffle',
+    name: 'shuffle',
+    standalone: true
 })
 export class ShufflePipe implements PipeTransform {
   transform(input: any): any {
@@ -11,7 +12,7 @@ export class ShufflePipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [ShufflePipe],
+  imports: [ShufflePipe],
   exports: [ShufflePipe],
 })
 export class NgShufflePipeModule {}

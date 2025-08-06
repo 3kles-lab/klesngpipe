@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray, sum } from '../utils/utils';
 
-@Pipe({ name: 'sum' })
+@Pipe({
+    name: 'sum',
+    standalone: true
+})
 export class SumPipe implements PipeTransform {
   transform(input: any): any {
     return !isArray(input) ? input : sum(input);
@@ -9,7 +12,7 @@ export class SumPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [SumPipe],
+  imports: [SumPipe],
   exports: [SumPipe],
 })
 export class NgSumPipeModule {}

@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isString } from '../utils/utils';
 
 @Pipe({
-  name: 'template',
+    name: 'template',
+    standalone: true
 })
 export class TemplatePipe implements PipeTransform {
   transform(input: any, ...args: any[]): any {
@@ -20,7 +21,7 @@ export class TemplatePipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [TemplatePipe],
+  imports: [TemplatePipe],
   exports: [TemplatePipe],
 })
 export class NgTemplatePipeModule {}

@@ -4,7 +4,8 @@ import { isNumberFinite, isPositive, isInteger, toDecimal } from '../utils/utils
 export type ByteUnit = 'B' | 'kB' | 'KB' | 'MB' | 'GB' | 'TB';
 
 @Pipe({
-  name: 'bytes',
+    name: 'bytes',
+    standalone: true
 })
 export class BytesPipe implements PipeTransform {
   static formats: { [key: string]: { max: number; prev?: ByteUnit } } = {
@@ -59,7 +60,7 @@ export class BytesPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [BytesPipe],
+  imports: [BytesPipe],
   exports: [BytesPipe],
 })
 export class NgBytesPipeModule {}

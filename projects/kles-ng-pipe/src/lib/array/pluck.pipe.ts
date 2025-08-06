@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray, getProperty } from '../utils/utils';
 
 @Pipe({
-  name: 'pluck',
+    name: 'pluck',
+    standalone: true
 })
 export class PluckPipe implements PipeTransform {
   transform(input: any, key: string): any {
@@ -17,7 +18,7 @@ export class PluckPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [PluckPipe],
+  imports: [PluckPipe],
   exports: [PluckPipe],
 })
 export class NgPluckPipeModule {}

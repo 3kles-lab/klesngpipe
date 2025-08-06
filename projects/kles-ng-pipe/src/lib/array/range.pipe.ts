@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform, NgModule } from '@angular/core';
 
 @Pipe({
-  name: 'range',
+    name: 'range',
+    standalone: true
 })
 export class RangePipe implements PipeTransform {
   transform(_input: any, size: number = 0, start: number = 1, step: number = 1): any {
@@ -16,7 +17,7 @@ export class RangePipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [RangePipe],
+  imports: [RangePipe],
   exports: [RangePipe],
 })
 export class NgRangePipeModule {}

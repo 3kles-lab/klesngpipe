@@ -4,7 +4,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isString, isUndefined } from '../utils/utils';
 
 @Pipe({
-  name: 'truncate',
+    name: 'truncate',
+    standalone: true
 })
 export class TruncatePipe implements PipeTransform {
   transform(input: any, length?: number, suffix?: string, preserve?: boolean): any {
@@ -35,7 +36,7 @@ export class TruncatePipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [TruncatePipe],
+  imports: [TruncatePipe],
   exports: [TruncatePipe],
 })
 export class NgTruncatePipeModule {}

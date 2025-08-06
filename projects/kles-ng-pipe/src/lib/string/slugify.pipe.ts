@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isString } from '../utils/utils';
 
-@Pipe({ name: 'slugify' })
+@Pipe({
+    name: 'slugify',
+    standalone: true
+})
 export class SlugifyPipe implements PipeTransform {
   transform(input: any): any {
     if (!isString(input)) {
@@ -17,7 +20,7 @@ export class SlugifyPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [SlugifyPipe],
+  imports: [SlugifyPipe],
   exports: [SlugifyPipe],
 })
 export class NgSlugifyPipeModule {}

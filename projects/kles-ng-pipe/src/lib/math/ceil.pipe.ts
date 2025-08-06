@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { createRound, isString } from '../utils/utils';
 
 @Pipe({
-  name: 'ceil',
+    name: 'ceil',
+    standalone: true
 })
 export class CeilPipe implements PipeTransform {
   transform(value: any, precision: any = 0): any {
@@ -15,7 +16,7 @@ export class CeilPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [CeilPipe],
+  imports: [CeilPipe],
   exports: [CeilPipe],
 })
 export class NgCeilPipeModule {}

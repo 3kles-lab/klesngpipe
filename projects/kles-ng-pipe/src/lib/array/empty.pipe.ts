@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { empty } from '../utils/utils';
 
 @Pipe({
-  name: 'empty',
+    name: 'empty',
+    standalone: true
 })
 export class EmptyPipe implements PipeTransform {
   transform(input: any): any {
@@ -11,7 +12,7 @@ export class EmptyPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [EmptyPipe],
+  imports: [EmptyPipe],
   exports: [EmptyPipe],
 })
 export class NgEmptyPipeModule {}

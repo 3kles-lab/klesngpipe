@@ -1,7 +1,8 @@
 import { PipeTransform, Pipe, NgModule } from '@angular/core';
 
 @Pipe({
-  name: 'less',
+    name: 'less',
+    standalone: true
 })
 export class IsLessPipe implements PipeTransform {
   transform(first: any, second: any): boolean {
@@ -10,7 +11,7 @@ export class IsLessPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [IsLessPipe],
+  imports: [IsLessPipe],
   exports: [IsLessPipe],
 })
 export class NgIsLessPipeModule {}

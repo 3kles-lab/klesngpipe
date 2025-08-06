@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray, sum } from '../utils/utils';
 
 @Pipe({
-  name: 'mean',
+    name: 'mean',
+    standalone: true
 })
 export class MeanPipe implements PipeTransform {
   transform(input: any): any {
@@ -21,7 +22,7 @@ export class MeanPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [MeanPipe],
+  imports: [MeanPipe],
   exports: [MeanPipe],
 })
 export class NgMeanPipeModule {}

@@ -1,7 +1,8 @@
 import { PipeTransform, Pipe, NgModule } from '@angular/core';
 
 @Pipe({
-  name: 'lessOrEqual',
+    name: 'lessOrEqual',
+    standalone: true
 })
 export class IsLessOrEqualPipe implements PipeTransform {
   transform(first: any, second: any): boolean {
@@ -10,7 +11,7 @@ export class IsLessOrEqualPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [IsLessOrEqualPipe],
+  imports: [IsLessOrEqualPipe],
   exports: [IsLessOrEqualPipe],
 })
 export class NgIsLessOrEqualPipeModule {}

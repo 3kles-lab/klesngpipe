@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isString } from '../utils/utils';
 
 @Pipe({
-  name: 'reverseStr',
+    name: 'reverseStr',
+    standalone: true
 })
 export class ReverseStrPipe implements PipeTransform {
   transform(input: string): string {
@@ -17,7 +18,7 @@ export class ReverseStrPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [ReverseStrPipe],
+  imports: [ReverseStrPipe],
   exports: [ReverseStrPipe],
 })
 export class NgReverseStrPipeModule {}

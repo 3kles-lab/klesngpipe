@@ -3,7 +3,10 @@
 import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isString, isUndefined } from '../utils/utils';
 
-@Pipe({ name: 'latinize' })
+@Pipe({
+    name: 'latinize',
+    standalone: true
+})
 export class LatinizePipe implements PipeTransform {
   transform(input: string): any {
     if (!isString(input) || isUndefined(input)) {
@@ -199,7 +202,7 @@ export class LatinizePipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [LatinizePipe],
+  imports: [LatinizePipe],
   exports: [LatinizePipe],
 })
 export class NgLatinizePipeModule {}

@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray, isFunction, getProperty, CollectionPredicate } from '../utils/utils';
 
 @Pipe({
-  name: 'firstOrDefault',
+    name: 'firstOrDefault',
+    standalone: true
 })
 export class FirstOrDefaultPipe implements PipeTransform {
   private static find(input: any[], predicate: CollectionPredicate, defaultValue?: any): any {
@@ -44,7 +45,7 @@ export class FirstOrDefaultPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [FirstOrDefaultPipe],
+  imports: [FirstOrDefaultPipe],
   exports: [FirstOrDefaultPipe],
 })
 export class NgFirstOrDefaultPipeModule {}

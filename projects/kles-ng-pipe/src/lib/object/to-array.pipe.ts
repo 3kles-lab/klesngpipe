@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isObject } from '../utils/utils';
 
-@Pipe({ name: 'toArray' })
+@Pipe({
+    name: 'toArray',
+    standalone: true
+})
 export class ToArrayPipe implements PipeTransform {
   transform(input: any): any {
     if (!isObject(input)) {
@@ -13,7 +16,7 @@ export class ToArrayPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [ToArrayPipe],
+  imports: [ToArrayPipe],
   exports: [ToArrayPipe],
 })
 export class NgToArrayPipeModule {}

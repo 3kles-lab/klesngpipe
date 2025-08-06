@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isNumberFinite } from '../utils/utils';
 
 @Pipe({
-  name: 'pow',
+    name: 'pow',
+    standalone: true
 })
 export class PowPipe implements PipeTransform {
   transform(input: any, power: number = 2): any {
@@ -15,7 +16,7 @@ export class PowPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [PowPipe],
+  imports: [PowPipe],
   exports: [PowPipe],
 })
 export class NgPowPipeModule {}

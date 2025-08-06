@@ -1,7 +1,8 @@
 import { PipeTransform, Pipe, NgModule } from '@angular/core';
 
 @Pipe({
-  name: 'notEqual',
+    name: 'notEqual',
+    standalone: true
 })
 export class IsNotEqualPipe implements PipeTransform {
   transform(first: any, second: any): boolean {
@@ -10,7 +11,7 @@ export class IsNotEqualPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [IsNotEqualPipe],
+  imports: [IsNotEqualPipe],
   exports: [IsNotEqualPipe],
 })
 export class NgIsNotEqualPipeModule {}

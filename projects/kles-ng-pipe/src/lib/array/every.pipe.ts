@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { every, CollectionPredicate } from '../utils/utils';
 
 @Pipe({
-  name: 'every',
+    name: 'every',
+    standalone: true
 })
 export class EveryPipe implements PipeTransform {
   transform(input: any, predicate: CollectionPredicate): any {
@@ -11,7 +12,7 @@ export class EveryPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [EveryPipe],
+  imports: [EveryPipe],
   exports: [EveryPipe],
 })
 export class NgEveryPipeModule {}

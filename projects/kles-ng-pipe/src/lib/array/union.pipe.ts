@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray, isDeepObject, unwrapDeep, deepIndexOf } from '../utils/utils';
 
 @Pipe({
-  name: 'union',
+    name: 'union',
+    standalone: true
 })
 export class UnionPipe implements PipeTransform {
   transform(a?: any, b?: any): any {
@@ -30,7 +31,7 @@ export class UnionPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [UnionPipe],
+  imports: [UnionPipe],
   exports: [UnionPipe],
 })
 export class NgUnionPipeModule {}

@@ -2,7 +2,8 @@ import { PipeTransform, Pipe, NgModule } from '@angular/core';
 import { isUndefined } from '../utils/utils';
 
 @Pipe({
-  name: 'isDefined',
+    name: 'isDefined',
+    standalone: true
 })
 export class IsDefinedPipe implements PipeTransform {
   transform(value: any): boolean {
@@ -11,7 +12,7 @@ export class IsDefinedPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [IsDefinedPipe],
+  imports: [IsDefinedPipe],
   exports: [IsDefinedPipe],
 })
 export class NgIsDefinedPipeModule {}

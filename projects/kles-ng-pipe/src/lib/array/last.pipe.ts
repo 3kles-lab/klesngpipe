@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray } from '../utils/utils';
 
 @Pipe({
-  name: 'last',
+    name: 'last',
+    standalone: true
 })
 export class LastPipe implements PipeTransform {
   transform(input: any): any {
@@ -16,7 +17,7 @@ export class LastPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [LastPipe],
+  imports: [LastPipe],
   exports: [LastPipe],
 })
 export class NgLastPipeModule {}

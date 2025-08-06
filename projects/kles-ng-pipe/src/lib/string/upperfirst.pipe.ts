@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isString, upperFirst } from '../utils/utils';
 
 @Pipe({
-  name: 'upperfirst',
+    name: 'upperfirst',
+    standalone: true
 })
 export class UpperFirstPipe implements PipeTransform {
   transform(input: any): any {
@@ -15,7 +16,7 @@ export class UpperFirstPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [UpperFirstPipe],
+  imports: [UpperFirstPipe],
   exports: [UpperFirstPipe],
 })
 export class NgUpperFirstPipeModule {}

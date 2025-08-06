@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray } from '../utils/utils';
 
 @Pipe({
-  name: 'max',
+    name: 'max',
+    standalone: true
 })
 export class MaxPipe implements PipeTransform {
   transform(input: any): any {
@@ -27,7 +28,7 @@ export class MaxPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [MaxPipe],
+  imports: [MaxPipe],
   exports: [MaxPipe],
 })
 export class NgMaxPipeModule {}

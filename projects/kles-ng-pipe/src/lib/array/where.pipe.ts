@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray, isFunction, getProperty } from '../utils/utils';
 
 @Pipe({
-  name: 'where',
+    name: 'where',
+    standalone: true
 })
 export class WherePipe implements PipeTransform {
   /**
@@ -27,7 +28,7 @@ export class WherePipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [WherePipe],
+  imports: [WherePipe],
   exports: [WherePipe],
 })
 export class NgWherePipeModule {}

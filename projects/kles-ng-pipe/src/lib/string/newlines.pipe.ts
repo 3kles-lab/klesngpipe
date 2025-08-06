@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isString } from '../utils/utils';
 
 @Pipe({
-  name: 'newlines',
+    name: 'newlines',
+    standalone: true
 })
 export class NewlinesPipe implements PipeTransform {
   transform(input: any): any {
@@ -15,7 +16,7 @@ export class NewlinesPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [NewlinesPipe],
+  imports: [NewlinesPipe],
   exports: [NewlinesPipe],
 })
 export class NgNewlinesPipeModule {}

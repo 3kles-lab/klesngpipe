@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray, isDeepObject, unwrapDeep, deepIndexOf } from '../utils/utils';
 
 @Pipe({
-  name: 'uniq',
+    name: 'uniq',
+    standalone: true
 })
 export class UniqPipe implements PipeTransform {
   transform(input: any): any {
@@ -24,7 +25,7 @@ export class UniqPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [UniqPipe],
+  imports: [UniqPipe],
   exports: [UniqPipe],
 })
 export class NgUniqPipeModule {}

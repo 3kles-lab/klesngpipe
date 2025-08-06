@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isString } from '../utils/utils';
 
 @Pipe({
-  name: 'match',
+    name: 'match',
+    standalone: true
 })
 export class MatchPipe implements PipeTransform {
   transform(input: any, pattern: any, flag: any): any {
@@ -16,7 +17,7 @@ export class MatchPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [MatchPipe],
+  imports: [MatchPipe],
   exports: [MatchPipe],
 })
 export class NgMatchPipeModule {}

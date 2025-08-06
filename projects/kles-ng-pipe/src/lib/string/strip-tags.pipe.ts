@@ -4,7 +4,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isString, isUndefined } from '../utils/utils';
 
 @Pipe({
-  name: 'stripTags',
+    name: 'stripTags',
+    standalone: true
 })
 export class StripTagsPipe implements PipeTransform {
   transform(input: string): any {
@@ -15,7 +16,7 @@ export class StripTagsPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [StripTagsPipe],
+  imports: [StripTagsPipe],
   exports: [StripTagsPipe],
 })
 export class NgStripTagsPipeModule {}

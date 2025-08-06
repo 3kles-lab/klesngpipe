@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray } from '../utils/utils';
 
 @Pipe({
-  name: 'map',
+    name: 'map',
+    standalone: true
 })
 export class MapPipe implements PipeTransform {
   transform(input: any, fn: Function): any {
@@ -15,7 +16,7 @@ export class MapPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [MapPipe],
+  imports: [MapPipe],
   exports: [MapPipe],
 })
 export class NgMapPipeModule {}

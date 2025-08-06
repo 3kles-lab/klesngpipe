@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray, isDeepObject, unwrapDeep, deepIndexOf } from '../utils/utils';
 
 @Pipe({
-  name: 'without',
+    name: 'without',
+    standalone: true
 })
 export class WithoutPipe implements PipeTransform {
   transform(input: any, ...args: any[]): any {
@@ -24,7 +25,7 @@ export class WithoutPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [WithoutPipe],
+  imports: [WithoutPipe],
   exports: [WithoutPipe],
 })
 export class NgWithoutPipeModule {}

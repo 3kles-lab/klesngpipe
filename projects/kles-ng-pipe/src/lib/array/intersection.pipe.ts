@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray, isDeepObject, unwrapDeep, deepIndexOf } from '../utils/utils';
 
 @Pipe({
-  name: 'intersection',
+    name: 'intersection',
+    standalone: true
 })
 export class IntersectionPipe implements PipeTransform {
   transform(a?: any, b?: any): any {
@@ -32,7 +33,7 @@ export class IntersectionPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [IntersectionPipe],
+  imports: [IntersectionPipe],
   exports: [IntersectionPipe],
 })
 export class NgIntersectionPipeModule {}

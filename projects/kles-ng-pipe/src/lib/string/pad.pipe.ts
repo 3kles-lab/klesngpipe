@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { pad, isString } from '../utils/utils';
 
 @Pipe({
-  name: 'pad',
+    name: 'pad',
+    standalone: true
 })
 export class PadPipe implements PipeTransform {
   transform(input: any, length: number = 0, character: string = ' '): any {
@@ -15,7 +16,7 @@ export class PadPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [PadPipe],
+  imports: [PadPipe],
   exports: [PadPipe],
 })
 export class NgPadPipeModule {}

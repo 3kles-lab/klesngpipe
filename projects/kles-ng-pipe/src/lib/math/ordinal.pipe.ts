@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isNumberFinite } from '../utils/utils';
 
 @Pipe({
-  name: 'ordinal',
+    name: 'ordinal',
+    standalone: true
 })
 export class OrdinalPipe implements PipeTransform {
   transform(input: any): any {
@@ -36,7 +37,7 @@ export class OrdinalPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [OrdinalPipe],
+  imports: [OrdinalPipe],
   exports: [OrdinalPipe],
 })
 export class NgOrdinalPipeModule {}

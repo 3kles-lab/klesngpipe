@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isString, upperFirst } from '../utils/utils';
 
 @Pipe({
-  name: 'capitalize',
+    name: 'capitalize',
+    standalone: true
 })
 export class CapitalizePipe implements PipeTransform {
   transform(input: any, all: boolean = false): any {
@@ -23,7 +24,7 @@ export class CapitalizePipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [CapitalizePipe],
+  imports: [CapitalizePipe],
   exports: [CapitalizePipe],
 })
 export class NgCapitalizePipeModule {}

@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isNumberFinite } from '../utils/utils';
 
 @Pipe({
-  name: 'sqrt',
+    name: 'sqrt',
+    standalone: true
 })
 export class SqrtPipe implements PipeTransform {
   transform(input: any): any {
@@ -15,7 +16,7 @@ export class SqrtPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [SqrtPipe],
+  imports: [SqrtPipe],
   exports: [SqrtPipe],
 })
 export class NgSqrtPipeModule {}

@@ -2,7 +2,8 @@ import { PipeTransform, Pipe, NgModule } from '@angular/core';
 import { isNil } from '../utils/utils';
 
 @Pipe({
-  name: 'isNil',
+    name: 'isNil',
+    standalone: true
 })
 export class IsNilPipe implements PipeTransform {
   transform(value: any): boolean {
@@ -11,7 +12,7 @@ export class IsNilPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [IsNilPipe],
+  imports: [IsNilPipe],
   exports: [IsNilPipe],
 })
 export class NgIsNilPipeModule {}

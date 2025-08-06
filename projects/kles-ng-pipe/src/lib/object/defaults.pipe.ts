@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isObject, isArray, isNil } from '../utils/utils';
 
-@Pipe({ name: 'defaults' })
+@Pipe({
+    name: 'defaults',
+    standalone: true
+})
 export class DefaultsPipe implements PipeTransform {
   transform(input: any, defaults: any): any {
     if (!isObject(defaults)) {
@@ -35,7 +38,7 @@ export class DefaultsPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [DefaultsPipe],
+  imports: [DefaultsPipe],
   exports: [DefaultsPipe],
 })
 export class NgDefaultsPipeModule {}

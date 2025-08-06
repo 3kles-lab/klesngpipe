@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isNumberFinite } from '../utils/utils';
 
 @Pipe({
-  name: 'radians',
+    name: 'radians',
+    standalone: true
 })
 export class RadiansPipe implements PipeTransform {
   transform(input: any): any {
@@ -15,7 +16,7 @@ export class RadiansPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [RadiansPipe],
+  imports: [RadiansPipe],
   exports: [RadiansPipe],
 })
 export class NgRadiansPipeModule {}

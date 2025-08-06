@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isString } from '../utils/utils';
 
 @Pipe({
-  name: 'split',
+    name: 'split',
+    standalone: true
 })
 export class SplitPipe implements PipeTransform {
   transform(input: any, separator: string = ' ', limit?: number): any {
@@ -15,7 +16,7 @@ export class SplitPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [SplitPipe],
+  imports: [SplitPipe],
   exports: [SplitPipe],
 })
 export class NgSplitPipeModule {}

@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isString } from '../utils/utils';
 
 @Pipe({
-  name: 'encodeURI',
+    name: 'encodeURI',
+    standalone: true
 })
 export class EncodeURIPipe implements PipeTransform {
   transform(input: any) {
@@ -15,7 +16,7 @@ export class EncodeURIPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [EncodeURIPipe],
+  imports: [EncodeURIPipe],
   exports: [EncodeURIPipe],
 })
 export class NgEncodeURIPipeModule {}

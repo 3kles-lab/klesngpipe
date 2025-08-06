@@ -4,7 +4,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isString, isUndefined } from '../utils/utils';
 
 @Pipe({
-  name: 'wrap',
+    name: 'wrap',
+    standalone: true
 })
 export class WrapPipe implements PipeTransform {
   transform(input: string, wrap: string, ends?: string): string {
@@ -13,7 +14,7 @@ export class WrapPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [WrapPipe],
+  imports: [WrapPipe],
   exports: [WrapPipe],
 })
 export class NgWrapPipeModule {}

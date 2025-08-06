@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isObject } from '../utils/utils';
 
-@Pipe({ name: 'keys' })
+@Pipe({
+    name: 'keys',
+    standalone: true
+})
 export class KeysPipe implements PipeTransform {
   transform(input: any): any {
     if (!isObject(input)) {
@@ -13,7 +16,7 @@ export class KeysPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [KeysPipe],
+  imports: [KeysPipe],
   exports: [KeysPipe],
 })
 export class NgKeysPipeModule {}

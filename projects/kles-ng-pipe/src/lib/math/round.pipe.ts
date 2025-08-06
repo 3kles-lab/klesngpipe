@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { createRound, isString } from '../utils/utils';
 
 @Pipe({
-  name: 'round',
+    name: 'round',
+    standalone: true
 })
 export class RoundPipe implements PipeTransform {
   transform(value: any, precision: any = 0): any {
@@ -15,7 +16,7 @@ export class RoundPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [RoundPipe],
+  imports: [RoundPipe],
   exports: [RoundPipe],
 })
 export class NgRoundPipeModule {}

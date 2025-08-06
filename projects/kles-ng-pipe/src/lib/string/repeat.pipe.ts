@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isString } from '../utils/utils';
 
 @Pipe({
-  name: 'repeat',
+    name: 'repeat',
+    standalone: true
 })
 export class RepeatPipe implements PipeTransform {
   transform(input: any, times: number = 1, characters: string = ''): any {
@@ -24,7 +25,7 @@ export class RepeatPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [RepeatPipe],
+  imports: [RepeatPipe],
   exports: [RepeatPipe],
 })
 export class NgRepeatPipeModule {}

@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform, NgModule } from '@angular/core';
 
 @Pipe({
-  name: 'filter',
+    name: 'filter',
+    standalone: true
 })
 export class FilterPipe implements PipeTransform {
   public transform(items: any[], searchText: string, key: string): any {
@@ -13,7 +14,7 @@ export class FilterPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [FilterPipe],
+  imports: [FilterPipe],
   exports: [FilterPipe],
 })
 export class NgFilterPipeModule { }

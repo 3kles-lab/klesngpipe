@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray } from '../utils/utils';
 
 @Pipe({
-  name: 'join',
+    name: 'join',
+    standalone: true
 })
 export class JoinPipe implements PipeTransform {
   transform(input: any, character: string = ''): any {
@@ -15,7 +16,7 @@ export class JoinPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [JoinPipe],
+  imports: [JoinPipe],
   exports: [JoinPipe],
 })
 export class NgJoinPipeModule {}

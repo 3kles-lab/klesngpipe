@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { wrapDeep, isDeepObject } from '../utils/utils';
 
 @Pipe({
-  name: 'deep',
+    name: 'deep',
+    standalone: true
 })
 export class DeepPipe implements PipeTransform {
   transform(value: any): any {
@@ -15,7 +16,7 @@ export class DeepPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [DeepPipe],
+  imports: [DeepPipe],
   exports: [DeepPipe],
 })
 export class NgDeepPipeModule {}

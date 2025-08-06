@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray, takeWhile, CollectionPredicate, isNil } from '../utils/utils';
 
 @Pipe({
-  name: 'takeWhile',
+    name: 'takeWhile',
+    standalone: true
 })
 export class TakeWhilePipe implements PipeTransform {
   transform(input: any, predicate?: CollectionPredicate): any {
@@ -15,7 +16,7 @@ export class TakeWhilePipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [TakeWhilePipe],
+  imports: [TakeWhilePipe],
   exports: [TakeWhilePipe],
 })
 export class NgTakeWhilePipeModule {}

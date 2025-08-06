@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { rightPad, isString } from '../utils/utils';
 
 @Pipe({
-  name: 'rightpad',
+    name: 'rightpad',
+    standalone: true
 })
 export class RightPadPipe implements PipeTransform {
   transform(input: any, length: number = 0, character: string = ' '): any {
@@ -15,7 +16,7 @@ export class RightPadPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [RightPadPipe],
+  imports: [RightPadPipe],
   exports: [RightPadPipe],
 })
 export class NgRightPadPipeModule {}

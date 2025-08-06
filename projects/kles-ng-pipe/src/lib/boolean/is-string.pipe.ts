@@ -2,7 +2,8 @@ import { PipeTransform, Pipe, NgModule } from '@angular/core';
 import { isString } from '../utils/utils';
 
 @Pipe({
-  name: 'isString',
+    name: 'isString',
+    standalone: true
 })
 export class IsStringPipe implements PipeTransform {
   transform(value: any): boolean {
@@ -11,7 +12,7 @@ export class IsStringPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [IsStringPipe],
+  imports: [IsStringPipe],
   exports: [IsStringPipe],
 })
 export class NgIsStringPipeModule {}

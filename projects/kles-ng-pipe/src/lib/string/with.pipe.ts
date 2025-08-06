@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isString, isNull } from '../utils/utils';
 
-@Pipe({ name: 'with' })
+@Pipe({
+    name: 'with',
+    standalone: true
+})
 export class WithPipe implements PipeTransform {
   transform(input: string, start: string | null = null, ends: string | null = null, csensitive: boolean = false): any {
     if (!isString(input) || (isNull(start) && isNull(ends)) || start == '' || ends == '') {
@@ -34,7 +37,7 @@ export class WithPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [WithPipe],
+  imports: [WithPipe],
   exports: [WithPipe],
 })
 export class NgWithPipeModule {}

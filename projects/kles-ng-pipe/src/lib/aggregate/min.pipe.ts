@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray } from '../utils/utils';
 
 @Pipe({
-  name: 'min',
+    name: 'min',
+    standalone: true
 })
 export class MinPipe implements PipeTransform {
   transform(input: any): any {
@@ -27,7 +28,7 @@ export class MinPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [MinPipe],
+  imports: [MinPipe],
   exports: [MinPipe],
 })
 export class NgMinPipeModule {}

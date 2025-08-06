@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray } from '../utils/utils';
 
 @Pipe({
-  name: 'take',
+    name: 'take',
+    standalone: true
 })
 export class TakePipe implements PipeTransform {
   transform(input: any, quantity?: number): any {
@@ -15,7 +16,7 @@ export class TakePipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [TakePipe],
+  imports: [TakePipe],
   exports: [TakePipe],
 })
 export class NgTakePipeModule {}

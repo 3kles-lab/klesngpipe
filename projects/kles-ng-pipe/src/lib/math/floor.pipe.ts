@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { createRound, isString } from '../utils/utils';
 
 @Pipe({
-  name: 'floor',
+    name: 'floor',
+    standalone: true
 })
 export class FloorPipe implements PipeTransform {
   transform(value: any, precision: any = 0): any {
@@ -15,7 +16,7 @@ export class FloorPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [FloorPipe],
+  imports: [FloorPipe],
   exports: [FloorPipe],
 })
 export class NgFloorPipeModule {}

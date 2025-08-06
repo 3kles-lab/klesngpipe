@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray } from '../utils/utils';
 
 @Pipe({
-  name: 'chunk',
+    name: 'chunk',
+    standalone: true
 })
 export class ChunkPipe implements PipeTransform {
   transform(input: any, size: number = 1): any {
@@ -20,7 +21,7 @@ export class ChunkPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [ChunkPipe],
+  imports: [ChunkPipe],
   exports: [ChunkPipe],
 })
 export class NgChunkPipeModule {}

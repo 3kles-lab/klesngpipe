@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isNumberFinite } from '../utils/utils';
 
 @Pipe({
-  name: 'random',
+    name: 'random',
+    standalone: true
 })
 export class RandomPipe implements PipeTransform {
   transform(input: any, min: number = 0, max: number = 1): any {
@@ -20,7 +21,7 @@ export class RandomPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [RandomPipe],
+  imports: [RandomPipe],
   exports: [RandomPipe],
 })
 export class NgRandomPipeModule {}

@@ -2,7 +2,8 @@ import { NgModule, Pipe, PipeTransform } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
 @Pipe({
-  name: 'dateFormat',
+    name: 'dateFormat',
+    standalone: true
 })
 export class DateFormatPipe implements PipeTransform {
   constructor(private datePipe: DatePipe) { }
@@ -17,7 +18,7 @@ export class DateFormatPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [DateFormatPipe],
+  imports: [DateFormatPipe],
   exports: [DateFormatPipe],
 })
 export class DateFormatPipeModule { }

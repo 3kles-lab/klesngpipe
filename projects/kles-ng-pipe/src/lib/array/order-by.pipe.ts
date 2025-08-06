@@ -2,7 +2,8 @@ import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray } from '../utils/utils';
 
 @Pipe({
-  name: 'orderBy',
+    name: 'orderBy',
+    standalone: true
 })
 export class OrderByPipe implements PipeTransform {
   private static _orderBy(a: any, b: any): number {
@@ -74,7 +75,7 @@ export class OrderByPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [OrderByPipe],
+  imports: [OrderByPipe],
   exports: [OrderByPipe],
 })
 export class NgOrderByPipeModule {}

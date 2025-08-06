@@ -1,7 +1,10 @@
 import { Pipe, PipeTransform, NgModule } from '@angular/core';
 import { isArray, isDeepObject, unwrapDeep, flatten } from '../utils/utils';
 
-@Pipe({ name: 'flatten' })
+@Pipe({
+    name: 'flatten',
+    standalone: true
+})
 export class FlattenPipe implements PipeTransform {
   transform(input: any): any {
     const isDeep = isDeepObject(input);
@@ -23,7 +26,7 @@ export class FlattenPipe implements PipeTransform {
 }
 
 @NgModule({
-  declarations: [FlattenPipe],
+  imports: [FlattenPipe],
   exports: [FlattenPipe],
 })
 export class NgFlattenPipeModule {}
