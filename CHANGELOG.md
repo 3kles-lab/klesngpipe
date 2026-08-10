@@ -1,3 +1,18 @@
+# [22.0.0](http://gitlab.3kles.local/3kles/lib/angular/klesngpipe/compare/v21.0.0...v22.0.0) (2026-08-10)
+
+
+* feat!: Update to Angular 22 ([ed4a2b4](http://gitlab.3kles.local/3kles/lib/angular/klesngpipe/commit/ed4a2b49683a65471a74e0b84c803a46c86e8f8e))
+
+
+### Bug Fixes
+
+* BaseUrl and collection predicate type ([2807301](http://gitlab.3kles.local/3kles/lib/angular/klesngpipe/commit/2807301c1d58ce0560913996ac957968a887eae4))
+
+
+### BREAKING CHANGES
+
+* Angular 22 is now required.
+
 # [21.0.0](http://gitlab.3kles.local/3kles/lib/angular/klesngpipe/compare/v20.0.0...v21.0.0) (2026-08-10)
 
 
