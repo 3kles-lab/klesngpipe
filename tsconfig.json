@@ -1,7 +1,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "esModuleInterop": true,
@@ -13,8 +12,8 @@
     "target": "ES2022",
     "paths": {
       "kles-ng-pipe": [
-        "dist/kles-ng-pipe/kles-ng-pipe",
-        "dist/kles-ng-pipe"
+        "./dist/kles-ng-pipe/kles-ng-pipe",
+        "./dist/kles-ng-pipe"
       ]
     },
     "useDefineForClassFields": false
