@@ -16,8 +16,8 @@
   },
   "homepage": "https://github.com/3kles-lab/kles-ng-pipe",
   "peerDependencies": {
-    "@angular/common": "^19.2.14",
-    "@angular/core": "^19.2.14"
+    "@angular/common": "^20.3.27",
+    "@angular/core": "^20.3.27"
   },
   "dependencies": {
     "tslib": "^2.0.0"
