@@ -1,3 +1,13 @@
+# [21.0.0](http://gitlab.3kles.local/3kles/lib/angular/klesngpipe/compare/v20.0.0...v21.0.0) (2026-08-10)
+
+
+* feat!: Update to Angular 21 ([1783842](http://gitlab.3kles.local/3kles/lib/angular/klesngpipe/commit/1783842d47f42bc4e85dfc0071272940d6aab48d))
+
+
+### BREAKING CHANGES
+
+* Angular 21 is now required.
+
 # [20.0.0](http://gitlab.3kles.local/3kles/lib/angular/klesngpipe/compare/v19.0.0...v20.0.0) (2026-08-10)
 
 
